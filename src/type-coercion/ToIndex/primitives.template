@@ -1,0 +1,11 @@
+// Copyright
+/*---
+name: primitives
+path: language/type-coercion/ToIndex/primitives-
+---*/
+
+/*{zero_0}*/0/*{zero_1}*/
+/*{zero_0}*/NaN/*{zero_1}*/
+/*{one_0}*/1/*{one_1}*/
+/*{one_0}*/true/*{one_1}*/
+/*{throws_0}*/TypeError/*{throws_1}*/Symbol("1")/*{throws_2}*/

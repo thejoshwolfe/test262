@@ -1,0 +1,20 @@
+// Copyright
+/*---
+desc: String.prototype.indexOf offset parameter type coercion
+template: ToIndex
+---*/
+
+//- zero_0
+assert.sameValue("a".indexOf("a", 
+//- zero_1
+), 0);
+//- one_0
+assert.sameValue("aa".indexOf("a", 
+//- one_1
+), 1);
+//- throws_0
+assert.throws(
+//- throws_1
+, function() { "".indexOf("", 
+//- throws_2
+); });

@@ -1,0 +1,18 @@
+// Copyright
+/*---
+name: toprimitive
+path: language/type-coercion/ToIndex/toprimitive-
+---*/
+
+function err() {
+  throw new Test262Error();
+}
+function MyError() {}
+
+/*{zero_0}*/({[Symbol.toPrimitive]: function() { return 0; }, valueOf: err, toString: err})/*{zero_1}*/
+/*{zero_0}*/({valueOf: function() { return 0; }, toString: err})/*{zero_1}*/
+/*{zero_0}*/({toString: function() { return 0; }})/*{zero_1}*/
+/*{throws_0}*/TypeError/*{throws_1}*/({[Symbol.toPrimitive]: function() { return {}; }})/*{throws_2}*/
+/*{throws_0}*/TypeError/*{throws_1}*/({[Symbol.toPrimitive]: {}})/*{throws_2}*/
+/*{zero_0}*/({[Symbol.toPrimitive]: null, toString: function() { return 0; }})/*{zero_1}*/
+/*{throws_0}*/MyError/*{throws_1}*/({[Symbol.toPrimitive]: function() { throw new MyError(); }})/*{throws_2}*/

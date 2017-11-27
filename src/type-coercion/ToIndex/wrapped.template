@@ -1,0 +1,22 @@
+// Copyright
+/*---
+name: wrapped
+path: language/type-coercion/ToIndex/wrapped-
+---*/
+
+/*{zero_0}*/Object(0)/*{zero_1}*/
+/*{zero_0}*/({[Symbol.toPrimitive]: function() { return 0; }})/*{zero_1}*/
+/*{zero_0}*/({valueOf: function() { return 0; }})/*{zero_1}*/
+/*{zero_0}*/({toString: function() { return 0; }})/*{zero_1}*/
+/*{zero_0}*/Object(NaN)/*{zero_1}*/
+/*{zero_0}*/({[Symbol.toPrimitive]: function() { return NaN; }})/*{zero_1}*/
+/*{zero_0}*/({valueOf: function() { return NaN; }})/*{zero_1}*/
+/*{zero_0}*/({toString: function() { return NaN; }})/*{zero_1}*/
+/*{one_0}*/Object(true)/*{one_1}*/
+/*{one_0}*/({[Symbol.toPrimitive]: function() { return true; }})/*{one_1}*/
+/*{one_0}*/({valueOf: function() { return true; }})/*{one_1}*/
+/*{one_0}*/({toString: function() { return true; }})/*{one_1}*/
+/*{throws_0}*/TypeError/*{throws_1}*/Object(Symbol("1"))/*{throws_2}*/
+/*{throws_0}*/TypeError/*{throws_1}*/({[Symbol.toPrimitive]: function() { return Symbol("1"); }})/*{throws_2}*/
+/*{throws_0}*/TypeError/*{throws_1}*/({valueOf: function() { return Symbol("1"); }})/*{throws_2}*/
+/*{throws_0}*/TypeError/*{throws_1}*/({toString: function() { return Symbol("1"); }})/*{throws_2}*/
