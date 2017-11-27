@@ -1,0 +1,38 @@
+// Copyright
+/*---
+desc: ToIndex coercion for simple object wrappers
+template: ToIndex
+---*/
+
+//- zero_0
+Object(0)
+//- zero_1
+({[Symbol.toPrimitive]: function() { return 0; }})
+//- zero_2
+({valueOf: function() { return 0; }})
+//- zero_3
+({toString: function() { return 0; }})
+//- zero_4
+Object(NaN)
+//- zero_5
+({[Symbol.toPrimitive]: function() { return NaN; }})
+//- zero_6
+({valueOf: function() { return NaN; }})
+//- zero_7
+({toString: function() { return NaN; }})
+//- one_0
+Object(true)
+//- one_1
+({[Symbol.toPrimitive]: function() { return true; }})
+//- one_2
+({valueOf: function() { return true; }})
+//- one_3
+({toString: function() { return true; }})
+//- throws_TypeError_0
+Object(Symbol("1"))
+//- throws_TypeError_1
+({[Symbol.toPrimitive]: function() { return Symbol("1"); }})
+//- throws_TypeError_2
+({valueOf: function() { return Symbol("1"); }})
+//- throws_TypeError_3
+({toString: function() { return Symbol("1"); }})

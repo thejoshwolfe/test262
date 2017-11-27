@@ -1,0 +1,26 @@
+// Copyright
+/*---
+desc: ToPrimitive coercion edge cases
+template: ToIndex
+---*/
+
+//- declarations
+function err() {
+  throw new Test262Error();
+}
+function MyError() {}
+
+//- zero_0
+({[Symbol.toPrimitive]: function() { return 0; }, valueOf: err, toString: err})
+//- zero_1
+({valueOf: function() { return 0; }, toString: err})
+//- zero_2
+({toString: function() { return 0; }})
+//- throws_TypeError_0
+({[Symbol.toPrimitive]: function() { return {}; }})
+//- throws_TypeError_1
+({[Symbol.toPrimitive]: {}})
+//- zero_3
+({[Symbol.toPrimitive]: null, toString: function() { return 0; }})
+//- throws_MyError_0
+({[Symbol.toPrimitive]: function() { throw new MyError(); }})

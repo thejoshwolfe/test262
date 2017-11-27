@@ -1,0 +1,16 @@
+// Copyright
+/*---
+desc: ToIndex coercion for primitive values
+template: ToIndex
+---*/
+
+//- zero_0
+0
+//- zero_1
+NaN
+//- one_0
+1
+//- one_1
+true
+//- throws_TypeError_0
+Symbol("1")

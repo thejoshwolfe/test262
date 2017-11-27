@@ -1,0 +1,14 @@
+// Copyright
+/*---
+name: String.prototype.indexOf offset
+path: built-ins/String/prototype/indexOf/offset-ToIndex-
+---*/
+
+/*{declarations}*/
+
+assert.sameValue("a".indexOf("a", /*{zero_0}*/), 0);
+assert.sameValue("a".indexOf("a", /*{zero_1}*/), 0);
+assert.sameValue("aa".indexOf("a", /*{one_0}*/), 1);
+assert.sameValue("aa".indexOf("a", /*{one_1}*/), 1);
+assert.throws(TypeError, function() { "".indexOf("", /*{throws_TypeError_0}*/); });
+assert.throws(MyError, function() { "".indexOf("", /*{throws_MyError_0}*/); });
